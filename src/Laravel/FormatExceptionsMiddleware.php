@@ -12,7 +12,7 @@ class FormatExceptionsMiddleware {
 		$this->renderer = $renderer;
 	}
 
-	public function handler($request, \Closure $next)
+	public function handle($request, \Closure $next)
 	{
 		try
 		{
