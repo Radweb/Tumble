@@ -1,0 +1,22 @@
+{
+  "name": "radweb/tumble",
+  "description": "for when it all comes tumbling down...",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Dan Harper",
+      "email": "dan@radweb.co.uk"
+    }
+  ],
+  "autoload": {
+    "psr-4": {
+      "Radweb\\Tumble\\": "src"
+    }
+  },
+  "require": {},
+  "require-dev": {
+    "illuminate/support": "^5.1",
+    "illuminate/http": "^5.1",
+    "illuminate/contracts": "^5.1"
+  }
+}
