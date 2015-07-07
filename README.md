@@ -1,3 +1,7 @@
+[<img src="http://i.imgur.com/Qslhr5z.png" align="right" height="40">](http://radweb.co.uk)
+
+[![Latest Stable Version](https://poser.pugx.org/radweb/tumble/v/stable.png)](https://packagist.org/packages/radweb/tumble) [![License](https://poser.pugx.org/radweb/tumble/license.png)](https://packagist.org/packages/radweb/tumble)
+
 # Tumble
 
 > for when it all comes tumbling down...
