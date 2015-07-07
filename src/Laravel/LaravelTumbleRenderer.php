@@ -52,7 +52,9 @@ class LaravelTumbleRenderer {
 			'line' => $e->getLine(),
 			'file' => $e->getFile(),
 			'code' => $e->getCode(),
-		] : [];
+		] : [
+			'message' => $e->getMessage(),
+		];
 
 		return array_merge($content, ['error' => $debug]);
 	}
