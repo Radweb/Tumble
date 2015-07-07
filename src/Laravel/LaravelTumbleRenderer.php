@@ -23,7 +23,7 @@ class LaravelTumbleRenderer {
 		}
 	}
 
-	private function tumbleException(TumbleException $e)
+	protected function tumbleException(TumbleException $e)
 	{
 		return new JsonResponse($this->addDebug($e, [
 			'message' => $e->getMessage(),
@@ -31,21 +31,21 @@ class LaravelTumbleRenderer {
 		]), $e->getHttpStatus());
 	}
 
-	private function symfonyException(SymfonyHttpException $e)
+	protected function symfonyException(SymfonyHttpException $e)
 	{
 		return new JsonResponse($this->addDebug($e, [
 			'message' => $e->getMessage()
 		]), $e->getStatusCode(), $e->getHeaders());
 	}
 
-	private function otherException(Exception $e)
+	protected function otherException(Exception $e)
 	{
 		return new JsonResponse($this->addDebug($e, [
 			'message' => $e->getMessage()
 		]), 500);
 	}
 
-	private function addDebug(Exception $e, $content)
+	protected function addDebug(Exception $e, $content)
 	{
 		$debug = env('APP_DEBUG', false) ? [
 			'message' => $e->getMessage(),
