@@ -20,8 +20,13 @@ class FormatExceptionsMiddleware {
 		}
 		catch (\Exception $e)
 		{
-			return $this->renderer->render($this->convertException($e));
+			return $this->renderException($e);
 		}
+	}
+
+	protected function renderException(\Exception $e)
+	{
+		return $this->renderer->render($this->convertException($e));
 	}
 
 	protected function convertException(\Exception $e)
