@@ -16,7 +16,15 @@ class FormatExceptionsMiddleware {
 	{
 		try
 		{
-			return $next($request);
+			$response = $next($request);
+
+			// Laravel 5.2 doesn't throw exceptions, it returns responses with it included
+			if (isset($response->exception) && $response->exception)
+			{
+				throw $response->exception;
+			}
+
+			return $response;
 		}
 		catch (\Exception $e)
 		{
